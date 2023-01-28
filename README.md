@@ -1,3 +1,6 @@
+### Attention
+The original repository due to containing a purchased unity asset(which only included 3D models such as building components, items etc...) is unavailable. The source code for the project, however, has been uploaded to this repository, including code from both the website and the VR game. Also the documentation in both markdown and as a word document.
+
 # Puzzle Game VR
 
 # Abstract
