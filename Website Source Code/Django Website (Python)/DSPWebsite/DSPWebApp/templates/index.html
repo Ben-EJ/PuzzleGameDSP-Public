@@ -1,0 +1,32 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>DSP Puzzle Game Website</title>
+    <link rel="stylesheet" href="{% static 'css/generalcss.css' %}">
+    <link rel="stylesheet" href="{% static 'css/indexcss.css' %}">
+</head>
+
+<body class="body">
+    <ul class="navBar">
+        <li class="button"><a class="linkToPage" href={% url 'home' %}>Home</a></li>
+        <li class="button"><a class="linkToPage" href={% url 'eightQueensLeader' %}>Eight Queens Leaderboard</a></li>
+        <li class="button"><a class="linkToPage" href={% url '2048Leader' %}>2048 Leaderboard</a></li>
+        <li class="button"><a class="linkToPage" href={% url 'aboutPage' %}>About</a></li>
+    </ul>
+
+    <div class="container">
+      <img class="imageBannerindex" src="{% static 'images/indexBanner.jpg' %}" alt="image" />
+      <div class="overlay">
+        <div class="text"><img class="imageBannereight" src="{% static 'images/indexBanner2.jpg' %}" alt="image" /><h1 class = "text">Welcome to the Puzzle Game Website</h1></div>
+        </div>
+      </div>
+   
+   <h1 class="welcomeText">Welcome to the DSP Puzzle Game home page</h1>
+   <center><p>This website provides information about both the game, 
+     how to play each puzzle and Leaderboard information for each puzzle</p></center>
+   <center><h1>Have fun playing!!</h1></center>
+</body>
+
+</html>
+

@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>DSP Puzzle Game Website</title>
+    <link rel="stylesheet" href="{% static 'css/generalcss.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+<body class="body">
+    <ul class="navBar">
+        <li class="button"><a class="linkToPage" href={% url 'home' %}>Home</a></li>
+        <li class="button"><a class="linkToPage" href={% url 'eightQueensLeader' %}>Eight Queens Leaderboard</a></li>
+        <li class="button"><a class="linkToPage" href={% url '2048Leader' %}>2048 Leaderboard</a></li>
+        <li class="button"><a class="linkToPage" href={% url 'aboutPage' %}>About</a></li>
+    </ul>
+   <h1 class="welcomeText">Welcome to the DSP Puzzle Game About page</h1>
+   <h2>How to play: </h2>
+   <p>When you first join the game you will be greated with two buttons for each of the puzzles 
+   and also a keyboard and screen.
+   </p>
+   <p>
+       The buttons in the main menu will take you to either puzzle, depending on which you click.
+       Both are labeled for convenience.
+   </p>
+   <p>
+       The keyboard allows a player to enter there name, this information will then be used to display score data on the puzzles
+       respective Leaderboard page.
+   </p>
+   <p>
+       The buttons will take you to either puzzle depending on which you click, both are labeled for 
+       convenience.
+   </p>
+   <p>
+       The keyboard allows a player to enter there name, this information will then be used to display 
+       score data on the puzzles respective Leaderboard page.
+   </p>
+   <img class="image1" src="{% static 'images/indexBanner.jpg' %}" alt="image" width="500" height="345" />
+   <h2>8 Queens: </h2>
+   <p>
+       8 Queens is played by placing all 8 queens on the chess board, in such a way that none of them can 
+       attack each other.
+   </p>
+   <p>
+       When all 8 queens have been played press the button on the right of where you spawn to check to see
+       if your solution is correct.
+   </p>
+   <img class="image2" src="{% static 'images/eightQueens.jpg' %}" alt="image" width="500" height="345"/>
+   <h2>2048: </h2>
+   <p>
+       Move and merge cubes to produce new cubes. When two cubes of the same value collide they create a new cube with a value of the two cubes used to create it added together.
+   </p>
+   <p>
+       You win by:
+       Move and match cubes until you get a 2048 cube. You gain 10 points for each merge you make.
+
+       You lose by:
+       Filling up the grid and having no moves or merges left to make.
+   </p>
+   <img class="image3" src="{% static 'images/TwoGrid.jpg' %}" alt="image" width="500" height="345"/>
+</body>
+
+</html>

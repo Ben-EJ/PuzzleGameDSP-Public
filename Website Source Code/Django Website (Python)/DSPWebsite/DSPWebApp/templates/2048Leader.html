@@ -1,0 +1,36 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>DSP Puzzle Game Website</title>
+    <link rel="stylesheet" href="{% static 'css/generalcss.css' %}">
+    <link rel="stylesheet" href="{% static 'css/2048Leader.css' %}">
+</head>
+
+<body class="body">
+    <ul class="navBar">
+        <li class="button"><a class="linkToPage" href={% url 'home' %}>Home</a></li>
+        <li class="button"><a class="linkToPage" href={% url 'eightQueensLeader' %}>Eight Queens Leaderboard</a></li>
+        <li class="button"><a class="linkToPage" href={% url '2048Leader' %}>2048 Leaderboard</a></li>
+        <li class="button"><a class="linkToPage" href={% url 'aboutPage' %}>About</a></li>
+    </ul>
+
+    <div class="container">
+      <img class="imageBannerindex" src="{% static 'images/TwoGrid.jpg' %}" alt="image" />
+      <div class="overlay">
+        <div class="text"><img class="imageBannereight" src="{% static 'images/TwoSideView.jpg' %}" alt="image" /></div>
+        </div>
+      </div>
+   
+   <h1 class="welcomeText">2048 Leaderboard</h1>
+   <div class="table">
+    <p>Contains all scores obtained by users whilst playing puzzle two, 2048.</p>
+    <ul>
+    {%for scores in all_records%}
+    <div class="listElement"><li>{{ scores }}</li></div>
+    {% endfor %}
+    </ul>
+    </div>
+</body>
+
+</html>
